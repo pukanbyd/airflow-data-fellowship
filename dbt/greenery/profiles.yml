@@ -1,0 +1,9 @@
+greenery:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: dev
+      user: "{{ env_var('CLICKHOUSE_USER', 'default') }}"
+      password: "{{ env_var('CLICKHOUSE_PASSWORD', 'clickhouse') }}"
+      host: "{{ env_var('DBT_CLICKHOUSE_HOST', 'localhost') }}"
